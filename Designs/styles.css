@@ -1,3 +1,83 @@
+/* Custom About Section Styles */
+.body, body, html {
+    overflow-x: hidden;
+}
+.about-section-custom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 4rem 0 2rem 0;
+    padding: 0px 90px;
+}
+.about-left {
+    flex: 2;
+}
+.about-heading-custom {
+    color: #0ef;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+.about-desc-custom {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.about-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.about-img-custom {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    filter: grayscale(1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.about-tab-vertical {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    background: #191970;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+@media (max-width: 900px) {
+    .about-section-custom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-right {
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+    .about-img-custom {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+    .about-tab-vertical {
+        right: 0;
+        top: auto;
+        bottom: -40px;
+        transform: none;
+        rotate: 0deg;
+    }
+}
 body {
     /* Modern dark gradient background for the portfolio */
     background: linear-gradient(135deg, #232526 0%, #0f2027 100%);
@@ -59,7 +139,7 @@ body {
     align-items: center;
     min-height: 70vh;
     gap: 0;
-    background: transparent;
+background: rgba(10, 34, 58, 0.7);
 }
 .home-content{
     max-width: 600px;
@@ -71,7 +151,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding: 40px 24px 40px 40px;
-    background: transparent;
+background: rgba(10, 34, 58, 0.7);
 }
 .home-content h1{
     font-size: 32px;
@@ -1072,7 +1152,7 @@ section{
     justify-content: center;
     align-items: flex-start;
     padding: 40px 24px 40px 40px;
-    background: transparent;
+  background: rgba(10, 34, 58, 0.7);
 }
 .home-content h1 {
     font-size: 2.5rem;
