@@ -1,7 +1,45 @@
-/* ===== BASE ===== */
+/* ===== CUSTOM CURSOR ===== */
 *, *::before, *::after {
     box-sizing: border-box;
+    cursor: none !important;
 }
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background: #0ef;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px #0ef;
+}
+
+.cursor-ring {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+/* Cursor grows on hovering links/buttons */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring {
+    width: 56px;
+    height: 56px;
+}
+
+/* ===== BASE ===== */
 html, body {
     overflow-x: hidden;
     margin: 0;
@@ -93,17 +131,34 @@ html, body {
 }
 @media (max-width: 900px) {
     .skills-section-wrapper {
-        padding: 40px 20px;
+        padding: 40px 16px;
     }
-    .skills-section-wrapper .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-}
-@media (max-width: 480px) {
     .skills-section-wrapper .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+    .skills-section-wrapper .skill-card {
+        flex-direction: row;
+        padding: 14px 12px;
+        gap: 12px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .skills-section-wrapper .skill-card i {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    }
+    .skills-section-wrapper .skill-card span {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .skills-section-wrapper {
+        padding: 30px 12px;
+    }
+    .skills-section-wrapper .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
 
@@ -166,22 +221,28 @@ html, body {
     .about-section-custom {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 5%;
     }
     .about-right {
         align-items: flex-start;
         margin-top: 2rem;
+        width: 100%;
+        overflow: hidden;
     }
     .about-img-custom {
         width: 100%;
-        max-width: 320px;
+        max-width: 280px;
         height: auto;
     }
     .about-tab-vertical {
-        right: 0;
-        top: auto;
-        bottom: -40px;
+        position: static;
+        display: inline-block;
+        margin-top: 12px;
         transform: none;
         rotate: 0deg;
+    }
+    .about-desc-custom {
+        font-size: 1.1rem;
     }
 }
 body {
@@ -681,16 +742,47 @@ section {
     color: #ededed;
     text-align: center;
 }
+/* ===== HAMBURGER BUTTON ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 200;
+}
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #0ef;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 @media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
     .header {
         width: 100%;
-        padding: 0 3%;
-        height: auto;
-        min-height: 60px;
-        flex-wrap: wrap;
-        gap: 4px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 0 5%;
+        height: 60px;
+        flex-wrap: nowrap;
+        position: fixed;
     }
     .title {
         font-size: 1.1rem;
@@ -698,14 +790,34 @@ section {
         animation: none !important;
     }
     .navbar {
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #051125;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 0 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        gap: 4px;
+        z-index: 99;
+    }
+    .navbar.open {
+        display: flex;
     }
     .navbar a {
-        font-size: 0.9rem;
-        padding: 4px 10px;
+        font-size: 1rem;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
         opacity: 1 !important;
         animation: none !important;
+        border-radius: 0;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+        background: rgba(0, 238, 255, 0.12);
     }
     #section-headline {
         font-size: 1.2rem !important;
@@ -764,12 +876,21 @@ section {
         height: auto !important;
     }
     .skills-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
     .skill-card {
-        padding: 20px 8px 18px 8px !important;
-        gap: 10px !important;
+        flex-direction: row !important;
+        padding: 14px 12px !important;
+        gap: 12px !important;
+        justify-content: flex-start !important;
+    }
+    .skill-card i {
+        font-size: 1.6rem !important;
+        margin-bottom: 0 !important;
+    }
+    .skill-card span {
+        font-size: 0.9rem !important;
     }
 }
 @media (max-width: 600px) {
@@ -822,15 +943,24 @@ section {
     box-sizing: border-box !important;
 }
 .skills-grid {
-    grid-template-columns: 1fr !important;
-    gap: 6px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
     width: 100% !important;
 }
 .skill-card {
-    padding: 10px 2vw 10px 2vw !important;
-    gap: 6px !important;
+    flex-direction: row !important;
+    padding: 12px 10px !important;
+    gap: 10px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    justify-content: flex-start !important;
+}
+.skill-card i {
+    font-size: 1.5rem !important;
+    margin-bottom: 0 !important;
+}
+.skill-card span {
+    font-size: 0.85rem !important;
 }
 }
 @keyframes animate{
@@ -1187,12 +1317,21 @@ section {
         height: auto !important;
     }
     .skills-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
     .skill-card {
-        padding: 20px 8px 18px 8px !important;
-        gap: 10px !important;
+        flex-direction: row !important;
+        padding: 14px 12px !important;
+        gap: 12px !important;
+        justify-content: flex-start !important;
+    }
+    .skill-card i {
+        font-size: 1.6rem !important;
+        margin-bottom: 0 !important;
+    }
+    .skill-card span {
+        font-size: 0.9rem !important;
     }
 }
 @media (max-width: 600px) {
@@ -1219,15 +1358,24 @@ section {
         box-sizing: border-box !important;
     }
     .skills-grid {
-        grid-template-columns: 1fr !important;
-        gap: 6px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
         width: 100% !important;
     }
     .skill-card {
-        padding: 10px 2vw 10px 2vw !important;
-        gap: 6px !important;
+        flex-direction: row !important;
+        padding: 12px 10px !important;
+        gap: 10px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        justify-content: flex-start !important;
+    }
+    .skill-card i {
+        font-size: 1.5rem !important;
+        margin-bottom: 0 !important;
+    }
+    .skill-card span {
+        font-size: 0.85rem !important;
     }
 }
 /* Home section layout */
@@ -1293,6 +1441,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .about-skill-row {
     width: 100%;
