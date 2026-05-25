@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Nikhila G - Web Developer & Designer Portfolio. Showcasing modern websites, React applications, and UI/UX design projects.">
-    <meta name="keywords" content="web developer, UI/UX designer, React, TypeScript, JavaScript, HTML, CSS, portfolio">
-    <title>Nikhila G - Web Developer & Designer Portfolio</title>
+        content="Nikhila Gummidi - Frontend Developer Portfolio. Angular, TypeScript, JavaScript, REST APIs.">
+    <meta name="keywords" content="frontend developer, Angular, TypeScript, JavaScript, HTML, CSS, RxJS, portfolio">
+    <title>Nikhila Gummidi - Frontend Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -15,26 +15,27 @@
 
 <body>
     <header class="header">
-        <h1 class="title">Gummidi Nikhila</h1>
+        <h1 class="title">Nikhila Gummidi</h1>
         <nav class="navbar">
             <a href="#home" class="nav-link active" data-section="home">Home</a>
             <a href="#about" class="nav-link" data-section="about">About</a>
             <a href="#skills" class="nav-link" data-section="skills">Skills</a>
             <a href="#experience" class="nav-link" data-section="experience">Experience</a>
             <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#education" class="nav-link" data-section="education">Education</a>
             <a href="#contact" class="nav-link" data-section="contact">Contact</a>
         </nav>
     </header>
-    <div id="section-headline"></div>
 
     <main>
-        <section id="home" style="padding: 90px;">
-            <div>
-                <h1>Hi, I am <span class="highlighted">Nikhila G</span></h1>
-                <h3>And I'm a <br><span class="text"></span></h3>
-                <p>I'm a web developer with over 2.6 years of experience.<br>
-                    My expertise is in website creation, design, and frontend development.
-                </p>
+        <!-- HOME -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Hi, I am <span class="highlighted">Nikhila Gummidi</span></h1>
+                <h3>I'm a <span class="text"></span></h3>
+                <p>Frontend Developer with 3+ years of experience in Angular, TypeScript, JavaScript, HTML, Bootstrap,
+                    CSS, and REST APIs. Skilled in building reusable UI components, responsive layouts, and API
+                    integrations.</p>
                 <div class="home-scl">
                     <a href="https://www.linkedin.com/in/gummidi-nikhila-00b1a9240/" target="_blank"
                         aria-label="LinkedIn Profile">
@@ -43,102 +44,143 @@
                     <a href="https://github.com/GummidiNikhila" target="_blank" aria-label="GitHub Profile">
                         <i class='bx bxl-github'></i>
                     </a>
+                    <a href="mailto:gummidinikhila9@gmail.com" aria-label="Email">
+                        <i class='bx bxl-gmail'></i>
+                    </a>
                 </div>
-                <a href="G_Nikhila_Resume.docx" class="btn-box" download
-                    style="display: inline-block;">
+                <a href="G_Nikhila_Resume.docx" class="btn-box" download>
                     <i class='bx bx-download'></i> Download Resume
                 </a>
-                <!-- <a href="#about" class="btn-box">More About Me</a> -->
             </div>
-            <!-- <div class="home-img-wrapper">
-                <div class="home-img-glow">
-                    <img src="images/assetss/myimage.jpeg" alt="Nikhila G - Web Developer" class="about-circle-img" />
-                </div>
-            </div> -->
         </section>
 
+        <!-- ABOUT -->
         <section id="about" class="about-skill-section">
             <div class="about-section-custom">
                 <div class="about-left">
                     <h2 class="about-heading-custom">WHO I AM?</h2>
                     <p class="about-desc-custom">
-                        Hi, I’m <span class="highlighted">Nikhila G</span>, a self-driven web developer with a strong
-                        interest in building scalable and well-structured web applications. I enjoy working across the
-                        full stack, applying modern technologies to solve real-world problems and create clean,
-                        efficient digital experiences.<br><br>
-                        I’m a quick learner with a problem-solving mindset and a strong focus on continuous improvement.
-                        I’m open to opportunities where I can contribute effectively, expand my technical skills, and
-                        grow as a software engineer.
+                        Hi, I'm <span class="highlighted">Nikhila Gummidi</span>, a Frontend Developer with 3+ years of
+                        experience at <span class="highlighted">WEXL AI, Hyderabad</span>. I specialize in building
+                        scalable, reusable Angular components and responsive UI layouts.<br><br>
+                        I'm strong in <span class="highlighted">Angular, TypeScript, RxJS, REST API integrations</span>,
+                        and cross-browser UI debugging. I enjoy translating design mock-ups into clean, functional web
+                        interfaces and collaborating closely with backend teams to deliver high-quality products.<br><br>
+                        I hold an <span class="highlighted">MSC in Statistics (GPA 9.2)</span> from VSU University and
+                        bring a strong analytical mindset to every problem I solve.
                     </p>
-
                 </div>
                 <div class="about-right">
-                    <img src="images/assetss/myimage.jpeg" alt="Nikhila G - Web Developer" class="about-img-custom" />
+                    <img src="images/assetss/myimage.jpeg" alt="Nikhila Gummidi - Frontend Developer"
+                        class="about-img-custom" />
                     <div class="about-tab-vertical">ABOUT ME</div>
                 </div>
             </div>
         </section>
 
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section-wrapper">
+            <h1 class="sub-title">My <span>Skills</span></h1>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class='bx bxl-angular' style='color:#dd0031'></i>
+                    <span>Angular</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-typescript' style='color:#007acc'></i>
+                    <span>TypeScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-javascript' style='color:#f7df1e'></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-html5' style='color:#e44d26'></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-css3' style='color:#264de4'></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-bootstrap' style='color:#7952b3'></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-infinite' style='color:#0ef'></i>
+                    <span>RxJS</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-git' style='color:#f05032'></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-transfer-alt' style='color:#ff6c37'></i>
+                    <span>REST APIs</span>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-test-tube' style='color:#0ef'></i>
+                    <span>Unit Testing</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
         <section id="experience" class="experience-section">
             <h1 class="sub-title">My <span>Experience</span></h1>
             <div class="experience-content">
-                <div class="experience-timeline">
-                    <div class="exp-item">
-                        <div class="exp-icon"><i class='bx bxl-html5' style='color:#e44d26'></i></div>
-                        <div class="exp-details">
-                            <h3>Frontend Developer <span>— HTML, CSS, JavaScript</span></h3>
-                            <p>Developed responsive and interactive web pages using HTML5, CSS3, and JavaScript. Focused
-                                on clean code, accessibility, and cross-browser compatibility.</p>
-                            <span class="exp-duration">2023 - Present</span>
+                <div class="exp-card-main">
+                    <div class="exp-card-header">
+                        <div class="exp-card-logo"><i class='bx bx-buildings' style='color:#0ef'></i></div>
+                        <div>
+                            <h3 class="exp-company">WEXL AI — Hyderabad, India</h3>
+                            <h4 class="exp-role">Software Development Engineer</h4>
+                            <span class="exp-duration">June 2023 – Present</span>
                         </div>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-icon"><i class='bx bxl-react' style='color:#61dafb'></i></div>
-                        <div class="exp-details">
-                            <h3>React Developer <span>— React, TypeScript</span></h3>
-                            <p>Built dynamic single-page applications with React and TypeScript. Implemented reusable
-                                components and state management for scalable projects.</p>
-                            <span class="exp-duration">2023 - Present</span>
-                        </div>
-                    </div>
-                    <div class="exp-item">
-                        <div class="exp-icon"><i class='bx bx-paint' style='color:#0ef'></i></div>
-                        <div class="exp-details">
-                            <h3>UI/UX Designer</h3>
-                            <p>Designed user-friendly interfaces and prototypes, focusing on user experience and modern
-                                design trends. Collaborated with developers to bring designs to life.</p>
-                            <span class="exp-duration">2022 - 2023</span>
-                        </div>
+                    <ul class="exp-list">
+                        <li>Developed reusable Angular components and optimized DOM interactions using TypeScript and
+                            RxJS.</li>
+                        <li>Integrated REST APIs using Angular services to improve UI performance.</li>
+                        <li>Resolved critical production issues and delivered quick root-cause fixes.</li>
+                        <li>Ensured unit tests passed during feature development and releases.</li>
+                        <li>Collaborated with backend and content teams for faster platform rollouts.</li>
+                        <li>Optimized application performance using lazy loading and efficient component structure.</li>
+                        <li>Built responsive and user-friendly UI layouts using HTML5, CSS3, and Bootstrap.</li>
+                        <li>Worked closely with UI/UX designers to translate design mock-ups into functional web
+                            interfaces.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Angular</span><span>TypeScript</span><span>RxJS</span><span>HTML5</span>
+                        <span>CSS3</span><span>Bootstrap</span><span>REST APIs</span><span>Git</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECTS -->
         <section id="projects" class="projects-section">
             <h1 class="sub-title">My <span>Projects</span></h1>
             <div class="projects-container">
+
                 <div class="project-item">
                     <div class="project-content">
                         <div class="project-number">01</div>
-                        <h3>WeXL Education Platform</h3>
-                        <p>We are a young and growing team of over 100 people with experience in edtech and technology.
-                            We believe in using technology to improve education. Our goal is to make learning easier and
-                            more accessible for everyone. WeXL aims to provide high-quality education, support, and
-                            services to people around the world.</p>
+                        <h3>E-Learning Web Application (WeXL)</h3>
+                        <p>A scalable online learning platform providing students access to digital study materials,
+                            video lectures, and online assessments. Allows instructors to manage courses, upload content,
+                            and track student performance through an interactive dashboard.</p>
                         <div class="project-links">
                             <a href="https://wexl.com" target="_blank" class="project-link" rel="noopener">
                                 <i class='bx bx-link-external'></i> Visit Site
                             </a>
-                            <a href="https://github.com/GummidiNikhila/wexl-project" target="_blank"
-                                class="project-github" rel="noopener">
+                            <a href="https://github.com/GummidiNikhila" target="_blank" class="project-github"
+                                rel="noopener">
                                 <i class='bx bxl-github'></i> GitHub
                             </a>
                         </div>
                         <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>TypeScript</span>
+                            <span>Angular</span><span>HTML</span><span>CSS3</span><span>REST APIs</span>
                         </div>
                     </div>
                     <div class="project-visual">
@@ -149,70 +191,91 @@
                 <div class="project-item">
                     <div class="project-content">
                         <div class="project-number">02</div>
-                        <h3>Personal Portfolio</h3>
-                        <p>A responsive portfolio website built with HTML5, CSS3, and JavaScript featuring modern
-                            animations, clean design, and smooth user experience to showcase my skills and projects.</p>
+                        <h3>Bharath English Test (BET)</h3>
+                        <p>A gamified English proficiency platform helping users improve vocabulary, grammar, reading,
+                            and listening through interactive modules. Includes structured assessments, practice tests,
+                            and a level-based progress tracking system.</p>
                         <div class="project-links">
                             <a href="#" class="project-link">
                                 <i class='bx bx-link-external'></i> Visit Site
                             </a>
-                            <a href="https://github.com/GummidiNikhila/portfolio" target="_blank" class="project-github"
+                            <a href="https://github.com/GummidiNikhila" target="_blank" class="project-github"
                                 rel="noopener">
                                 <i class='bx bxl-github'></i> GitHub
                             </a>
                         </div>
                         <div class="project-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
+                            <span>Angular</span><span>HTML</span><span>CSS3</span><span>TypeScript</span>
                         </div>
                     </div>
                     <div class="project-visual">
-                        <i class='bx bx-user'></i>
+                        <i class='bx bx-trophy'></i>
                     </div>
                 </div>
 
                 <div class="project-item">
                     <div class="project-content">
                         <div class="project-number">03</div>
-                        <h3>React Web Application</h3>
-                        <p>A modern web application built with React and TypeScript, featuring component-based
-                            architecture, state management, and responsive design for optimal user experience.</p>
+                        <h3>Vastraloop</h3>
+                        <p>A multi-vendor e-commerce platform where users can act as both buyers and sellers. Features
+                            include product listing management, dynamic inventory updates, and a seamless shopping
+                            experience for buyers to browse and purchase products.</p>
                         <div class="project-links">
                             <a href="#" class="project-link">
                                 <i class='bx bx-link-external'></i> Visit Site
                             </a>
-                            <a href="https://github.com/GummidiNikhila/react-app" target="_blank" class="project-github"
+                            <a href="https://github.com/GummidiNikhila" target="_blank" class="project-github"
                                 rel="noopener">
                                 <i class='bx bxl-github'></i> GitHub
                             </a>
                         </div>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>TypeScript</span>
-                            <span>CSS3</span>
+                            <span>Angular</span><span>HTML</span><span>CSS3</span><span>REST APIs</span>
                         </div>
                     </div>
                     <div class="project-visual">
-                        <i class='bx bxl-react'></i>
+                        <i class='bx bx-store'></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="education-section">
+            <h1 class="sub-title">My <span>Education</span></h1>
+            <div class="education-content">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class='bx bxs-graduation' style='color:#0ef'></i></div>
+                    <div class="edu-details">
+                        <h3>MSC — Statistics</h3>
+                        <h4>VSU University, Nellore, India</h4>
+                        <p>Graduated with a GPA of <span class="highlighted">9.2 / 10</span></p>
+                        <span class="exp-duration">Aug 2019 – May 2021</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact" class="contact-section">
             <div class="container1">
                 <div class="contact-header">
                     <h1 class="sub-title">Contact <span>Me</span></h1>
                     <h2>Let's Connect!</h2>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                        vision. Feel free to reach out to me through any of the platforms below.</p>
+                    <p>I'm open to discussing new projects, creative ideas, or frontend opportunities. Reach out through
+                        any of the platforms below.</p>
                 </div>
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class='bx bxl-gmail' style='color:#0ef; font-size:2rem;'></i>
                         <span>Email</span>
                         <a href="mailto:gummidinikhila9@gmail.com">gummidinikhila9@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-phone' style='color:#0ef; font-size:2rem;'></i>
+                        <span>Phone</span>
+                        <a href="tel:+919032315157">+91 90323 15157</a>
                     </div>
                     <div class="contact-item">
                         <i class='bx bxl-linkedin' style='color:#0ef; font-size:2rem;'></i>
@@ -229,9 +292,10 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-content">
-            <span>&copy; 2025 Nikhila G. All rights reserved.</span>
+            <span>&copy; 2025 Nikhila Gummidi. All rights reserved.</span>
             <span class="footer-links">
                 <a href="https://github.com/GummidiNikhila" target="_blank" aria-label="GitHub Profile">
                     <i class='bx bxl-github'></i>
@@ -240,7 +304,7 @@
                     aria-label="LinkedIn Profile">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="mailto:gummidinikhila9@gmail.com" aria-label="Email Contact">
+                <a href="mailto:gummidinikhila9@gmail.com" aria-label="Email">
                     <i class='bx bxl-gmail'></i>
                 </a>
             </span>

@@ -1,9 +1,9 @@
 // Typed.js initialization for home section text animation
 var typed = new Typed(".text", {
-    strings: ["Web Designer", "Web Developer", "UI/UX Designer"],
+    strings: ["Frontend Developer", "Angular Developer", "UI/UX Enthusiast"],
     typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
+    backSpeed: 80,
+    backDelay: 1200,
     loop: true
 });
 
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         skills: 'My Skills',
         projects: 'My Projects',
         experience: 'My Experience',
+        education: 'My Education',
         contact: 'Contact Me'
     };
 
